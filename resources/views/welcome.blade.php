@@ -15,8 +15,30 @@
     <main role="main">
 
 
+        <section>
+            <div style="background: url(../assets/img/gb.webp) " class="page-holder bg-cover">
+    
+                <div class="container py-5">
+                    <br>
+                    <br>
+                    <header class="text-center text-white py-5">
+                        <h1 class="display-4 font-weight-bold mb-4 text-white " style="text-shadow: 3px 4px #0707078F;">Welcome To Artfric</h1>
+                        <p class="lead mb-0">Explore African Best Artworks</p>
+                        <p class="font-italic"> 
+                            <a href="https://bootstrapious.com" class="text-white">
+                                <u></u></a>
+    
+    
+                        </p>
+                        
+                    </header>
+                </div>
+            </div>
+        </section>
 
-        <div class="page-header min-vh-75 g-sidenav-show  bg-gray-100  " style="background: url(../assets/img/gb.webp)">
+        <!--start:Intro -->
+
+        {{-- <div class="page-header min-vh-75 g-sidenav-show  bg-gray-100  " style="background: url(../assets/img/gb.webp)">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-lg-5 col-md-6 d-flex flex-column mx-auto z-index-0" style="margin: 8rem">
@@ -76,11 +98,11 @@
                                     </div>
                                     <div class="carousel-item" id="carousel3">
 
-                                        <div class="card ">
+                                        <div class="card blur" style="background-image: url(../assets/img/gb4.jpg); color: white;">
                                             <div class="card-body p-3">
                                                 <div class="row">
                                                     <div class="col-lg-6">
-                                                        <div class="d-flex flex-column h-100">
+                                                        <div class="d-flex flex-column ">
                                                             <p class="mb-5 font-weight-bolder">Expressions of Ancestral
                                                                 Heritage: Step
                                                                 into the realm of African arts and encounter a legac that
@@ -113,11 +135,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
+
+
         <!--end:Intro -->
         <section class="space-md">
 
-            <div class="card card-background  card-background-mask-secondary" style="margin-top: 10px">
+            <div class="card card-background  card-background-mask-secondary" style="margin-top: -10px">
                 <div class="full-background" style="background-image: url('../assets/img/curved-images/white-curved.jpeg')">
                 </div>
                 <div class="card-body row text-start p-3 w-100">
@@ -127,7 +151,7 @@
                     <div class="row text-center">
                         <div class="col-md-1 icon icon-shape icon-sm bg-white shadow">
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-8">
                             <h1>Enjoy african universe</h1>
                         </div>
                     </div>
@@ -248,8 +272,8 @@
                         <div class="row mt-3" style="">
                             @foreach ($artists as $artist)
                                 <div class="card" style="width: 20rem; margin: 3px;">
-                                    {{-- asset('storage/' . $artist->photoPath)  --}}
-                                    <img src="../assets/img/bruce-mars.jpg" class="card-img-top"
+                                    
+                                    <img src="{{ asset('storage/' . $artist->photoPath) }}" class="card-img-top"
                                         alt="{{ $artist->firstname . ' ' . $artist->lastname }}">
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $artist->firstname . ' ' . $artist->lastname }}</h5>

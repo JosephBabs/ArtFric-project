@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="text-center mx-auto article-header  blur blur-rounded shadow py-2 start-0 end-0 mx4"
-                    style="margin-top: -30px; margin-bottom:10px;">
+                    style="margin-top: -30px; margin-bottom:10px; padding: 10px;">
 
                     <!--< itemprop="headline" class="article-blog-titre text-center mx-auto w-90">-->
                     <h1 itemprop="headline" class="article-blog-titre text-center mx-auto w-100">
@@ -114,7 +114,7 @@
                                         <p class="card-text">by <a
                                                 href="{{ route('artist.show', $art->artist_id) }}">{{ $artist_name }}</a>
                                         </p>
-                                        <p class="card-text"><a href="#" class="btn btn-primary">View</a></p>
+                                        <p class="card-text"><a href="{{ route('art.show', $art->id) }}" class="btn btn-primary">View</a></p>
                                     </div>
 
                                 </div>

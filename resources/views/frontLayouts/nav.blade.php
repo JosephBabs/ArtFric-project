@@ -19,14 +19,14 @@
 
     
         <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navigation" aria-controls="navigation" aria-expanded="true" aria-label="Toggle navigation">
+            data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon mt-2">
                 <span class="navbar-toggler-bar bar1"></span>
                 <span class="navbar-toggler-bar bar2"></span>
                 <span class="navbar-toggler-bar bar3"></span>
             </span>
         </button>
-        <div class="navbar-collapse ps collapse show" id="navigation" style="">
+        <div class="navbar-collapse ps collapse hide" id="navigation" style="">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
@@ -50,7 +50,7 @@
                 <li class="nav-item">
                     <a class="btn btn-sm btn-round mb-0 me-1 bg-gradient-dark" data-toggle="modal" data-target="#requestart" href="#">
                         <i class="fas fa-plus opacity-6 me-1 {{ Request::is('static-sign-up') ? '' : 'text-white' }}"></i>
-                        Request An Art
+                        Customise An Art
                     </a>
                 </li>
             </ul>
@@ -67,7 +67,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Request An Art</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Customise An Art</h5>
           @if (session('errors'))
             <div class="mb-4 font-medium text-sm text-green-600 alert alert-danger">
                 {{ session('errors') }}
