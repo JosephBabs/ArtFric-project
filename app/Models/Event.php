@@ -9,7 +9,5 @@ class Event extends Model
 {
     use HasFactory;
 
-    public function bids(){
-        return $this->hasMany(Bid::class);
-    }
+   
 }

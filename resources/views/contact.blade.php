@@ -20,7 +20,7 @@
                         </p>
                         <div class="card blur blur-rounded" style="padding: 10px; text-align:start;">
 
-                            <p class="lead mt-4 text-dark" style="padding: 20px; margin: 3em;"> <strong> Welcome to our art
+                            <p class="lead mt-4 text-dark" style=""> <strong> Welcome to our art
                                     website's contact page!</strong>
                                 <br>
                                 We value your feedback, inquiries, and thoughts about our artistic endeavors. Whether you're
@@ -37,85 +37,85 @@
 
 
 
-                            <div class="row" style="margin: 1em;">
-                                <div class="col-md-3 card text-dark" style="padding: 20px; height: 150px; margin: 1em;">
-                                    <p>
-                                        <strong>Indiana</strong>
-                                        <br>
-                                        Indianapolis
-                                        <br>
-                                        917-735-8844
-                                        <br>
-                                        2800 Alfred Drive
-                                    </p>
-                                </div>
-                                <div class="col-md-6 pl-lg-5 pl-md-5 card pd-4" style="padding: 20px; margin: 1em">
-                                    @if (session('errors'))
-                                        <div class="mb-4 font-medium text-sm text-green-600 alert alert-danger">
-                                            {{ session('errors') }}
-                                        </div>
-                                    @endif
-                                    @if (session('status'))
-                                        <div class="mb-4 font-medium text-sm text-green-600 alert alert-success">
-                                            {{ session('status') }}
-                                        </div>
-                                    @endif
-
-                                    <h2>
-                                        Get in touch with us
-                                    </h2>
-
-                                    <div style="display: box; align-content: center; align-items: center; width: 100%;">
-                                        <form action="contact_us" method="POST">
-                                            @csrf
-                                            <div class="contact-form mt-5">
-                                                <div class="form-group row">
-
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="firstname"
-                                                            placeholder="Enter First Name" name="firstname">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="lastname"
-                                                            placeholder="Enter Last Name" name="lastname">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-
-                                                    <div class="col-sm-10">
-                                                        <input type="email" class="form-control" id="email"
-                                                            placeholder="Enter email" name="email">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-
-                                                    <div class="col-sm-10">
-                                                        <textarea class="form-control" name="message" rows="5" id="message" placeholder="Your Message..."></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <div class="col-sm-offset-2 col-sm-10">
-                                                        <button type="submit"
-                                                            class="btn bg-gradient-info w-100 mt-4 mb-0 font-weight-bold">Submit
-                                                            Your
-                                                            Message</button>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <!-- end:contact -->
-                                </div>
-                            </div>
+                          
 
                         </div>
 
                     </header>
+                    <div class="row" style="margin: 1em;">
+                        <div class="col-md-3 card text-dark" style="padding: 20px; height: 150px; margin-bottom: 1em; margin-right: 10px;">
+                            <p>
+                                <strong>Indiana</strong>
+                                <br>
+                                Indianapolis
+                                <br>
+                                917-735-8844
+                                <br>
+                                2800 Alfred Drive
+                            </p>
+                        </div>
+                        <div class="col-md-6 pl-lg-5 pl-md-5 card pd-4" style="padding: 20px; ">
+                            @if (session('errors'))
+                                <div class="mb-4 font-medium text-sm text-green-600 alert alert-danger">
+                                    {{ session('errors') }}
+                                </div>
+                            @endif
+                            @if (session('status'))
+                                <div class="mb-4 font-medium text-sm text-green-600 alert alert-success">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
 
+                            <h2>
+                                Get in touch with us
+                            </h2>
+
+                            <div style="display: box; align-content: center; align-items: center; width: 100%;">
+                                <form action="contact_us" method="POST">
+                                    @csrf
+                                    <div class="contact-form mt-2 align-items: center">
+                                        <div class="form-group row">
+
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="firstname"
+                                                    placeholder="Enter First Name" name="firstname">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="lastname"
+                                                    placeholder="Enter Last Name" name="lastname">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+
+                                            <div class="col-sm-10">
+                                                <input type="email" class="form-control" id="email"
+                                                    placeholder="Enter email" name="email">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+
+                                            <div class="col-sm-10">
+                                                <textarea class="form-control" name="message" rows="5" id="message" placeholder="Your Message..."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit"
+                                                    class="btn bg-gradient-info w-100 mt-4 mb-0 font-weight-bold">Submit
+                                                    Your
+                                                    Message</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- end:contact -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

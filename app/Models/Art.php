@@ -17,4 +17,12 @@ class Art extends Model
     public function categorie(){
         return $this->belongsTo(Category::class);
     }
+
+    public function auctions(){
+        return $this->belongsToMany(Auction::class);
+    }
+
+    public function bids(){
+        return $this->hasMany(Bid::class);
+    }
 }

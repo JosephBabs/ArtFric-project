@@ -114,7 +114,7 @@
                                         <p class="card-text">by <a
                                                 href="{{ route('artist.show', $art->artist_id) }}">{{ $artist_name }}</a>
                                         </p>
-                                        <p class="card-text"><a href="#" class="btn btn-primary">View</a></p>
+                                        <p class="card-text"><a href="{{ route('art.show', $art->id) }}" class="btn btn-primary">View</a></p>
                                     </div>
 
                                 </div>

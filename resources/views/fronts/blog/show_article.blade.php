@@ -27,7 +27,9 @@
                     <span class="category-name">
                         <a href="/" itemprop="genre">Home</a> </span>
                     <span class="px-2">|</span>
-
+                    <span class="category-name">
+                        <a href="/blog" itemprop="genre">Blog</a> </span>
+                    <span class="px-2">/</span>
                     <span class="category-name">
                         <a href="#" itemprop="genre">{{ $article->title }}</time></a> </span>
                     <span class="px-2"></span>

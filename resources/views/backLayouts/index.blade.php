@@ -301,6 +301,31 @@
                                 <li class="nav-item">
                                     <a href="#" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
+                                        <p>Auctions</p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="{{ url('dashboard/auctions/create') }}" class="nav-link">
+                                                <i class="far fa-dot-circle nav-icon"></i>
+                                                <p>Add Auction</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{{ url('dashboard/arts') }}" class="nav-link">
+                                                <i class="far fa-dot-circle nav-icon"></i>
+                                                <p> Auctions list</p>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </li>
+
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
                                         <p>Events</p>
                                     </a>
                                     <ul class="nav nav-treeview">

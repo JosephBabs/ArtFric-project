@@ -16,8 +16,10 @@ return new class extends Migration
             $table->string('biderName');
             $table->string('biderEmail');
             $table->string('biderPrice');
-            $table->index('event_id');
-            $table->foreignId('event_id')->references('id')->on('events')->onDelete('cascade');
+            $table->index('auction_id');
+            $table->foreignId('auction_id')->references('id')->on('events')->onDelete('cascade');
+            $table->index('art_id');
+            $table->foreignId('art_id')->references('id')->on('events')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -2,7 +2,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Request An Art</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Customise An Art</h5>
           @if (session('errors'))
             <div class="mb-4 font-medium text-sm text-green-600 alert alert-danger">
                 {{ session('errors') }}
@@ -24,6 +24,7 @@
                     <label for="fullname">Full Name:</label>
                     <input type="text" class="form-control" id="fullname" name="fullname" required>
                 </div>
+                
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" class="form-control" id="email" name="email" required>

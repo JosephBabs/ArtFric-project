@@ -17,7 +17,7 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Price</th>
-                                <th>Events</th>
+                                <th>Auctions</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -27,7 +27,8 @@
                                 <td>{{ $bid->biderName }}</td>
                                 <td>{{ $bid->biderEmail }}</td>
                                 <td>{{ $bid->biderPrice }}</td>
-                                <td>{{ $bid->event->title }}</td>
+                                <td>{{ $bid->auction->title }}</td>
+                                <td>{{ $bid->bid->title }}</td>
                                
                             </tr>
                             @endforeach

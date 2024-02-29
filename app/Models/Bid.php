@@ -16,7 +16,10 @@ class Bid extends Model
         'event_id',
     ];
 
-    public function event(){
-        return $this->belongsTo(Event::class);
+    public function art(){
+        return $this->belongsTo(Art::class);
+    }
+    public function auction(){
+        return $this->belongsTo(Auction::class);
     }
 }
