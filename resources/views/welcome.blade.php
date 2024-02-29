@@ -15,28 +15,106 @@
     <main role="main">
 
 
-        <section>
-            <div style="background: url(../assets/img/gb.webp) " class="page-holder bg-cover">
-    
-                <div class="container py-5">
-                    <br>
-                    <br>
-                    <header class="text-center text-white py-5">
-                        <h1 class="display-4 font-weight-bold mb-4 text-white " style="text-shadow: 3px 4px #0707078F;">Welcome To Artfric</h1>
-                        <p class="lead mb-0">Explore African Best Artworks</p>
-                        <p class="font-italic"> 
-                            <a href="https://bootstrapious.com" class="text-white">
-                                <u></u></a>
-    
-    
-                        </p>
-                        
-                    </header>
+
+        <div class="page-header min-vh-75 g-sidenav-show  bg-gray-100  " style="background: url(../assets/img/gb.webp)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-5 col-md-6 d-flex flex-column mx-auto z-index-0" style="margin: 8rem">
+                        <div class="card " style="position: relative; padding-left:0%; ">
+
+                            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+
+                                <div class="carousel-inner">
+                                    <div class="carousel-item " id="carousel1">
+                                        <div class="card ">
+                                            <div class="card-body p-3">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="d-flex flex-column h-100">
+                                                            <p class="mb-5 font-weight-bolder">Unveiling the Soul of Africa:
+                                                                Delve
+                                                                into the captivating
+                                                                world of African arts and stories.</p>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
+                                                        <div class="bg-gradient-primary border-radius-lg h-100">
+                                                            <img src="{{ asset('storage/arts_images/pexels-steve-johnson-1509534.jpg') }}"
+                                                                class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
+                                                                alt="Slide 1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="carousel-item" id="carousel2">
+                                        <div class="card ">
+                                            <div class="card-body p-3">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="d-flex flex-column h-100">
+                                                            <p class="mb-5 font-weight-bolder">Tales of the Savannah:
+                                                                African arts
+                                                                narrate the rich
+                                                                tapestry of history, spirituality, and identity.</p>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
+                                                        <div class="bg-gradient-primary border-radius-lg h-100">
+                                                            <img src="{{ asset('storage/arts_images/pexels-steve-johnson-1509534.jpg') }}"
+                                                                class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
+                                                                alt="Slide 1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" id="carousel3">
+
+                                        <div class="card ">
+                                            <div class="card-body p-3">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="d-flex flex-column h-100">
+                                                            <p class="mb-5 font-weight-bolder">Expressions of Ancestral
+                                                                Heritage: Step
+                                                                into the realm of African arts and encounter a legac that
+                                                                transcends generations.</p>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
+                                                        <div class="bg-gradient-primary border-radius-lg h-100">
+                                                            <img src="{{ asset('storage/arts_images/pexels-steve-johnson-1509534.jpg') }}"
+                                                                class="position-absolute h-100 w-50 top-0 d-lg-block d-none"
+                                                                alt="Slide 1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="oblique position-absolute top-0 h-100 d-md-block d-none me-n8">
+                            <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
+                                style="background-image: url(../assets/img/gb4.jpg)"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-
-       
+        </div>
+        <!--end:Intro -->
         <section class="space-md">
 
             <div class="card card-background  card-background-mask-secondary" style="margin-top: -10px">
@@ -178,21 +256,22 @@
 
 
 
-                    <div class="row mt-3" style="">
-                        @foreach ($artists as $artist)
-                            <div class="card" style="width: 20rem; margin: 3px;">
-                                <img src="{{ asset('storage/' . $artist->photoPath) }}" class="card-img-top"
-                                alt="{{ $artist->firstname . ' ' . $artist->lastname }}">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ $artist->firstname . ' ' . $artist->lastname }}</h5>
-                                    <p class="card-text text-dark">
-                                        {{ Illuminate\Support\Str::limit($artist->bio, 100) }}</p>
-                                    <a href="{{ route('artist.show', $artist->id) }}" class="btn btn-primary">View
-                                        Profile</a>
+                        <div class="row mt-3" style="">
+                            @foreach ($artists as $artist)
+                                <div class="card" style="width: 20rem; margin: 3px;">
+                                    {{-- asset('storage/' . $artist->photoPath)  --}}
+                                    <img src="../assets/img/bruce-mars.jpg" class="card-img-top"
+                                        alt="{{ $artist->firstname . ' ' . $artist->lastname }}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $artist->firstname . ' ' . $artist->lastname }}</h5>
+                                        <p class="card-text text-dark">
+                                            {{ Illuminate\Support\Str::limit($artist->bio, 100) }}</p>
+                                        <a href="{{ route('artist.show', $artist->id) }}" class="btn btn-primary">View
+                                            Profile</a>
+                                    </div>
                                 </div>
-                            </div>
-                        @endforeach
-                    </div>
+                            @endforeach
+                        </div>
 
                     <!-- Add more artist cards as needed -->
                 </div>
